@@ -1,2 +1,13 @@
 master分支
-添加online分支其他代码不变
+git checkout -b online
+git fetch --all
+git reset -- hard origin/master
+git pull origin master:online
+修改文件a.txt
+git add a.txt
+git commit -e "修改a.txt"
+git checkout master
+git merge online
+git add a.txt
+git commit -m "修改a.txt"
+git push origin master:master
